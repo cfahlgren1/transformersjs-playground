@@ -25,10 +25,16 @@ const SentimentAnalysisIcon: React.FC<IconProps> = ({ className = '' }) => {
       
       {/* Sentiment analysis result */}
       <rect x="110" y="10" width="80" height="80" fill="#fffbeb" stroke="#fff" strokeWidth="1" rx="5" ry="5" />
-      <circle cx="150" cy="50" r="22" fill="#4ade80" />
-      <path d="M140 50 Q 150 60, 160 50" fill="none" stroke="#fffbeb" strokeWidth="2" />
-      <circle cx="143" cy="43" r="2" fill="#fffbeb" />
-      <circle cx="157" cy="43" r="2" fill="#fffbeb" />
+      
+      {/* Sentiment gauge background */}
+      <rect x="120" y="30" width="60" height="20" fill="#e5e7eb" rx="10" ry="10" />
+      
+      {/* Sentiment gauge fill (80% positive) */}
+      <rect x="120" y="30" width="48" height="20" fill="#4ade80" rx="10" ry="10" />
+      
+      {/* Sentiment score text */}
+      <text x="150" y="70" fill="#4ade80" fontSize="14" fontWeight="bold" textAnchor="middle">80%</text>
+      <text x="150" y="85" fill="#92400e" fontSize="10" textAnchor="middle">Positive</text>
     </svg>
   );
 };

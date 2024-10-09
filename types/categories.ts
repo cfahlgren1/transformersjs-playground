@@ -4,6 +4,7 @@ export type CategoryStatus = 'New' | 'Coming Soon' | 'Available';
 
 export interface Category {
   title: string;
+  slug: string;
   icon: LucideIcon;
   description: string;
   status: CategoryStatus;

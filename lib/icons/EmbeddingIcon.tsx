@@ -21,10 +21,18 @@ const EmbeddingIcon: React.FC<IconProps> = ({ className = '' }) => {
       {/* 3D space representation */}
       <rect x="110" y="10" width="80" height="80" fill="#f0fdfa" stroke="#fff" strokeWidth="1" rx="5" ry="5" />
       
-      {/* 3D axes */}
-      <line x1="115" y1="85" x2="185" y2="85" stroke="#0f766e" strokeWidth="1" opacity="0.5" />
-      <line x1="115" y1="85" x2="115" y2="15" stroke="#0f766e" strokeWidth="1" opacity="0.5" />
-      <line x1="115" y1="85" x2="145" y2="65" stroke="#0f766e" strokeWidth="1" opacity="0.5" />
+      {/* Improved 3D axes with reduced opacity */}
+      <line x1="115" y1="85" x2="185" y2="85" stroke="#0f766e" strokeWidth="1" opacity="0.3" />
+      <polygon points="185,85 181,83 181,87" fill="#0f766e" opacity="0.3" />
+      <text x="187" y="89" fill="#0f766e" fontSize="8" opacity="0.3">x</text>
+
+      <line x1="115" y1="85" x2="115" y2="15" stroke="#0f766e" strokeWidth="1" opacity="0.3" />
+      <polygon points="115,15 113,19 117,19" fill="#0f766e" opacity="0.3" />
+      <text x="111" y="13" fill="#0f766e" fontSize="8" opacity="0.3">y</text>
+
+      <line x1="115" y1="85" x2="145" y2="65" stroke="#0f766e" strokeWidth="1" opacity="0.3" />
+      <polygon points="145,65 141,67 143,70" fill="#0f766e" opacity="0.3" />
+      <text x="147" y="64" fill="#0f766e" fontSize="8" opacity="0.3">z</text>
       
       {/* 3D points */}
       <circle cx="150" cy="40" r="4" fill="#f472b6" />

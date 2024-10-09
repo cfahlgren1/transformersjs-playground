@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import type { Category } from '../types/categories';
 import { getColorConfig } from '../lib/utils';
 
@@ -10,7 +11,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   colorName,
   description,
   status,
-  graphic: Graphic
+  graphic: Graphic,
+  slug
 }) => {
   const { bg, text, gradient, iconBg } = getColorConfig(colorName);
   const isComingSoon = status === 'Coming Soon';
@@ -32,14 +34,20 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <Graphic />
       </div>
       <p className="text-sm font-medium mb-3 leading-tight">{description}</p>
-      <button 
-        className={`w-full bg-white ${text} py-2 px-3 rounded-lg text-sm font-semibold transition-colors mt-auto ${
-          isComingSoon ? 'opacity-50 cursor-not-allowed' : 'hover:bg-opacity-90'
-        }`}
-        disabled={isComingSoon}
-      >
-        {isComingSoon ? 'Coming Soon' : 'View Tools'}
-      </button>
+      {isComingSoon ? (
+        <button 
+          className="w-full bg-white opacity-50 cursor-not-allowed py-2 px-3 rounded-lg text-sm transition-colors mt-auto text-black font-extrabold"
+          disabled
+        >
+          Coming Soon
+        </button>
+      ) : (
+        <Link href={`/categories/${slug}`} passHref>
+          <a className={`w-full bg-white ${text} py-2 px-3 rounded-lg text-sm font-semibold transition-colors mt-auto text-center hover:bg-opacity-90`}>
+            View Tools
+          </a>
+        </Link>
+      )}
     </div>
   );
 };
