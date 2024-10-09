@@ -13,7 +13,7 @@ export const categories: Category[] = [
     title: "Segment",
     slug: "segment",
     icon: Scissors,
-    description: "Break down images into distinct segments based on the object or background.",
+    description: "Slice and dice images with precision. Carve out objects and backgrounds like a digital sculptor.",
     status: "Coming Soon",
     colorName: "indigo",
     graphic: SegmentationIcon
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     title: "Embed",
     slug: "embed",
     icon: Sparkles,
-    description: "Create vector embeddings for text and images.",
+    description: "Transform words and pixels into mathematical magic.",
     status: "Coming Soon",
     colorName: "teal",
     graphic: EmbeddingIcon
@@ -31,7 +31,7 @@ export const categories: Category[] = [
     title: "Transcribe",
     slug: "transcribe",
     icon: Mic,
-    description: "Convert speech to text with high accuracy using advanced AI-powered transcription (Whisper).",
+    description: "AI that hears all and forgets nothing (except the 'uhms').",
     status: "Coming Soon",
     colorName: "rose",
     graphic: TranscriptionIcon
@@ -40,7 +40,7 @@ export const categories: Category[] = [
     title: "Sentiment",
     slug: "sentiment",
     icon: Smile,
-    description: "Analyze text to determine the emotional tone and attitude, classifying it as positive, negative, or neutral.",
+    description: "Read between the lines. From 🤗 to 😠, we've got feelings figured out.",
     status: "Coming Soon",
     colorName: "amber",
     graphic: SentimentAnalysisIcon
@@ -49,7 +49,7 @@ export const categories: Category[] = [
     title: "Classify",
     slug: "classify",
     icon: Tags,
-    description: "Categorize text or images into predefined classes using machine learning algorithms.",
+    description: "Sort the digital chaos.",
     status: "Coming Soon",
     colorName: "purple",
     graphic: ClassificationIcon
@@ -58,7 +58,7 @@ export const categories: Category[] = [
     title: "Generate Text",
     slug: "generate-text",
     icon: Type,
-    description: "Create human-like text based on prompts or context using advanced language models.",
+    description: "Llama. Qwen. Enough said.",
     status: "Coming Soon",
     colorName: "blue",
     graphic: TextGenerationIcon
