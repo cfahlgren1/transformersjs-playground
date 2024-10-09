@@ -11,7 +11,7 @@ export const categories: Category[] = [
     title: "Segment",
     icon: Scissors,
     description: "Break down images into distinct segments based on the object or background.",
-    isNew: true,
+    status: "Coming Soon",
     colorName: "indigo",
     graphic: SegmentationIcon
   },
@@ -19,6 +19,7 @@ export const categories: Category[] = [
     title: "Embed",
     icon: Sparkles,
     description: "Create vector embeddings for text and images.",
+    status: "Coming Soon",
     colorName: "teal",
     graphic: EmbeddingIcon
   },
@@ -26,6 +27,7 @@ export const categories: Category[] = [
     title: "Transcribe",
     icon: Mic,
     description: "Convert speech to text with high accuracy using advanced AI-powered transcription (Whisper).",
+    status: "Coming Soon",
     colorName: "rose",
     graphic: TranscriptionIcon
   },
@@ -33,6 +35,7 @@ export const categories: Category[] = [
     title: "Sentiment",
     icon: Smile,
     description: "Analyze text to determine the emotional tone and attitude, classifying it as positive, negative, or neutral.",
+    status: "Coming Soon",
     colorName: "amber",
     graphic: SentimentAnalysisIcon
   }
