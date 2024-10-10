@@ -14,7 +14,7 @@ export const categories: Category[] = [
     slug: "segment",
     icon: Scissors,
     description: "Slice and dice images with precision. Carve out objects and backgrounds like a digital sculptor.",
-    status: "Coming Soon",
+    status: "Available",
     colorName: "indigo",
     graphic: SegmentationIcon
   },
@@ -23,7 +23,7 @@ export const categories: Category[] = [
     slug: "embed",
     icon: Sparkles,
     description: "Transform words and pixels into mathematical magic.",
-    status: "Coming Soon",
+    status: "Available",
     colorName: "teal",
     graphic: EmbeddingIcon
   },
@@ -32,7 +32,7 @@ export const categories: Category[] = [
     slug: "transcribe",
     icon: Mic,
     description: "AI that hears all and forgets nothing (except the 'uhms').",
-    status: "Coming Soon",
+    status: "Available",
     colorName: "rose",
     graphic: TranscriptionIcon
   },
@@ -41,7 +41,7 @@ export const categories: Category[] = [
     slug: "sentiment",
     icon: Smile,
     description: "Read between the lines. From 🤗 to 😠, we've got feelings figured out.",
-    status: "Coming Soon",
+    status: "Available",
     colorName: "amber",
     graphic: SentimentAnalysisIcon
   },
@@ -50,7 +50,7 @@ export const categories: Category[] = [
     slug: "classify",
     icon: Tags,
     description: "Sort the digital chaos.",
-    status: "Coming Soon",
+    status: "Available",
     colorName: "purple",
     graphic: ClassificationIcon
   },
@@ -59,7 +59,7 @@ export const categories: Category[] = [
     slug: "generate-text",
     icon: Type,
     description: "Llama. Qwen. Enough said.",
-    status: "Coming Soon",
+    status: "Available",
     colorName: "blue",
     graphic: TextGenerationIcon
   }

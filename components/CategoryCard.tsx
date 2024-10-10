@@ -12,40 +12,48 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   description,
   status,
   graphic: Graphic,
-  slug
+  slug,
 }) => {
   const { bg, text, gradient, iconBg } = getColorConfig(colorName);
   const isComingSoon = status === 'Coming Soon';
 
-  return (
-    <div className={`rounded-xl p-4 text-white w-92 h-[380px] flex flex-col relative shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 ${gradient}`}>
+  const CardContent = () => (
+    <>
       {(status === 'New' || status === 'Coming Soon') && (
-        <div className={`absolute top-2 right-2 ${bg} ${text} text-xs font-bold py-1 px-2 rounded-full`}>
+        <div className={`absolute top-4 right-4 ${bg} ${text} text-xs font-bold py-1 px-2 rounded-full`}>
           {status}
         </div>
       )}
-      <div className="flex items-center mb-3">
-        <div className={`${iconBg} ${text} p-1.5 rounded-full mr-2`}>
-          <Icon size={20} />
+      <div className="mb-2">
+        <div className="flex items-center">
+          <div className={`${iconBg} ${text} p-2 rounded-full mr-3`}>
+            <Icon size={20} />
+          </div>
+          <h2 className="text-xl font-bold">{title}</h2>
         </div>
-        <h2 className="text-xl font-bold">{title}</h2>
       </div>
-      <div className="mb-3 flex-grow">
+      <div className="flex-grow px-8 py-4"> 
         <Graphic />
       </div>
-      <p className="text-sm font-medium mb-3 leading-tight">{description}</p>
+      <p className="text-sm font-medium leading-tight mt-2">{description}</p>
+    </>
+  );
+
+  return (
+    <div className={`rounded-xl p-6 text-white w-92 h-72 flex flex-col relative shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 ${gradient}`}>
       {isComingSoon ? (
-        <button 
-          className="w-full bg-white opacity-50 cursor-not-allowed py-2 px-3 rounded-lg text-sm transition-colors mt-auto text-black font-extrabold"
-          disabled
-        >
-          Coming Soon
-        </button>
+        <>
+          <CardContent />
+          <button 
+            className="w-full bg-white opacity-50 cursor-not-allowed py-2 px-3 rounded-lg text-xs transition-colors mt-3 text-black font-extrabold"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </>
       ) : (
-        <Link href={`/categories/${slug}`} passHref>
-          <a className={`w-full bg-white ${text} py-2 px-3 rounded-lg text-sm font-semibold transition-colors mt-auto text-center hover:bg-opacity-90`}>
-            View Tools
-          </a>
+        <Link href={`/category/${slug}`} className="flex flex-col flex-grow">
+          <CardContent />
         </Link>
       )}
     </div>
