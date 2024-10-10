@@ -6,7 +6,7 @@ import { categories } from "@/lib/categories";
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8 text-center">
-      <PillLink text="Transformers.js" link="https://www.npmjs.com/package/@xenova/transformers" newText='Powered by' />
+      <PillLink text="Transformers.js" link="https://www.npmjs.com/package/@huggingface/transformers" newText='Powered by' />
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter mb-4">
         Playground
       </h1>
