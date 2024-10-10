@@ -8,7 +8,7 @@ pinned: false
 ---
 # Transformers.js Playground
 
-![Transformers.js Playground](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/webllm/shot.png)
+![Transformers.js Playground](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/webllm/shot.png?)
 
 ## Getting Started
 

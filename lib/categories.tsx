@@ -10,6 +10,24 @@ import TextGenerationIcon from './icons/TextGenerationIcon';
 
 export const categories: Category[] = [
   {
+    title: "Generate Text",
+    slug: "generate-text",
+    icon: Type,
+    description: "Llama. Qwen. Enough said.",
+    status: "Available",
+    colorName: "blue",
+    graphic: TextGenerationIcon
+  },
+  {
+    title: "Transcribe",
+    slug: "transcribe",
+    icon: Mic,
+    description: "AI that hears all and forgets nothing (except the 'uhms').",
+    status: "Available",
+    colorName: "rose",
+    graphic: TranscriptionIcon
+  },
+  {
     title: "Segment",
     slug: "segment",
     icon: Scissors,
@@ -26,15 +44,6 @@ export const categories: Category[] = [
     status: "Available",
     colorName: "teal",
     graphic: EmbeddingIcon
-  },
-  {
-    title: "Transcribe",
-    slug: "transcribe",
-    icon: Mic,
-    description: "AI that hears all and forgets nothing (except the 'uhms').",
-    status: "Available",
-    colorName: "rose",
-    graphic: TranscriptionIcon
   },
   {
     title: "Sentiment",
@@ -54,13 +63,4 @@ export const categories: Category[] = [
     colorName: "purple",
     graphic: ClassificationIcon
   },
-  {
-    title: "Generate Text",
-    slug: "generate-text",
-    icon: Type,
-    description: "Llama. Qwen. Enough said.",
-    status: "Available",
-    colorName: "blue",
-    graphic: TextGenerationIcon
-  }
 ];
