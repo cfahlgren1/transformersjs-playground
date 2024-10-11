@@ -89,10 +89,30 @@ function DemoCards({ category, colorConfig }: { category: Category; colorConfig:
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {category.demos.map((Demo, index) => (
-        <div key={index} className={cn("rounded-lg shadow-md p-6", colorConfig.bg)}>
-          <Demo />
-        </div>
+      {category.demos.map((demo, index) => (
+        <Link 
+          key={index} 
+          href={`/category/${category.slug}/${demo.slug}`} 
+          className={cn(
+            "block rounded-lg shadow-md p-6 transition-all duration-300",
+            colorConfig.bg,
+            "hover:shadow-lg hover:-translate-y-1"
+          )}
+        >
+          <h3 className={cn("text-xl font-bold mb-2", colorConfig.text)}>
+            {demo.title}
+          </h3>
+          <p className="text-sm text-gray-600 mb-4">
+            {demo.description}
+          </p>
+          <span className={cn(
+            "inline-block px-3 py-1 text-sm font-semibold rounded-full",
+            colorConfig.text,
+            colorConfig.bg
+          )}>
+            View Demo
+          </span>
+        </Link>
       ))}
     </div>
   );

@@ -30,4 +30,4 @@ jobs:
 
     - name: Push to Hugging Face Spaces
       run: |
-        git push hf main || echo "No changes to deploy."
+        git push hf +main || echo "Failed to deploy."
