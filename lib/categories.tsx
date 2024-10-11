@@ -7,7 +7,7 @@ import SentimentAnalysisIcon from './icons/SentimentAnalysisIcon';
 import EmbeddingIcon from './icons/EmbeddingIcon';
 import ClassificationIcon from './icons/ClassificationIcon';
 import TextGenerationIcon from './icons/TextGenerationIcon';
-
+import Llama32Page from '@/app/category/generate-text/llama-3.2/page';
 export const categories: Category[] = [
   {
     title: "Generate Text",
@@ -16,7 +16,15 @@ export const categories: Category[] = [
     description: "Llama. Qwen. Enough said.",
     status: "Available",
     colorName: "blue",
-    graphic: TextGenerationIcon
+    graphic: TextGenerationIcon,
+    demos: [
+      {
+        title: "Llama 3.2",
+        slug: "llama-3.2",
+        component: Llama32Page,
+        description: "Llama 3.2 in the browser. WebGPU FTW."
+      }
+    ]
   },
   {
     title: "Transcribe",
