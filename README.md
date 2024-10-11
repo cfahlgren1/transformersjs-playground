@@ -3,8 +3,9 @@ title: Transformers.js Playground
 emoji: 🛝
 colorFrom: indigo
 colorTo: purple
-sdk: static
-pinned: false
+sdk: docker
+pinned: true
+app_port: 3000
 ---
 # Transformers.js Playground
 

@@ -9,33 +9,25 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Build project
-      run: npm run build
-
-    - name: Copy README to dist
-      run: cp README.md dist/
-
-    - name: Push to Hugging Face Spaces
-      env:
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    - name: Set up Git
       run: |
-        cd dist
-        git init
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git config user.name "github-actions[bot]"
+
+    - name: Add Hugging Face remote
+      run: |
+        git remote add hf https://${{ secrets.HF_USERNAME }}:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/${{ secrets.HF_USERNAME }}/${{ secrets.SPACE_NAME }}
+
+    - name: Commit changes if any
+      run: |
         git add .
-        git commit -m "Update build artifacts and README"
-        git push --force https://${{ secrets.HF_USERNAME }}:$HF_TOKEN@huggingface.co/spaces/${{ secrets.HF_USERNAME }}/${{ secrets.SPACE_NAME }} HEAD:main
+        git diff --cached --quiet || git commit -m "Deploy to Hugging Face Spaces"
+
+    - name: Push to Hugging Face Spaces
+      run: |
+        git push hf main || echo "No changes to deploy."
