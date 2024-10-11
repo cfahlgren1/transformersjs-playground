@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # Fetch all history for all branches and tags
 
     - name: Set up Git
       run: |
@@ -22,6 +24,10 @@ jobs:
     - name: Add Hugging Face remote
       run: |
         git remote add hf https://${{ secrets.HF_USERNAME }}:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/${{ secrets.HF_USERNAME }}/${{ secrets.SPACE_NAME }}
+
+    - name: Fetch from Hugging Face
+      run: |
+        git fetch hf
 
     - name: Commit changes if any
       run: |

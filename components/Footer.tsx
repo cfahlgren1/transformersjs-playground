@@ -6,17 +6,16 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-emerald-400/80 p-20 relative overflow-hidden rounded-xl">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <div className="flex flex-wrap justify-between items-center gap-y-4 mb-12">
           {categories.map((category) => (
-            <div key={category.slug} className="text-center sm:text-left">
-              <Link 
-                href={`/category/${category.slug}`}
-                className="text-lg font-bold text-emerald-800 hover:text-emerald-900 transition-colors duration-300 ease-in-out relative group"
-              >
-                {category.title}
-                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-emerald-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
-              </Link>
-            </div>
+            <Link 
+              key={category.slug}
+              href={`/category/${category.slug}`}
+              className="text-lg font-bold text-emerald-800 hover:text-emerald-900 transition-colors duration-300 ease-in-out relative group"
+            >
+              {category.title}
+              <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-emerald-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+            </Link>
           ))}
         </div>
       </div>
