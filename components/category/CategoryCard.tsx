@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import type { Category } from '../types/categories';
-import { getColorConfig } from '../lib/utils';
+import type { Category } from '../../types/categories';
+import { getColorConfig } from '../../lib/utils';
 
 type CategoryCardProps = Category;
 

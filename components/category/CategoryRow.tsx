@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import CategoryCard from '@/components/CategoryCard';
+import CategoryCard from '@/components/category/CategoryCard';
 import { Category } from '@/types/categories';
 
 interface CategoryRowProps {

@@ -10,4 +10,5 @@ export interface Category {
   status: CategoryStatus;
   colorName: string;
   graphic: React.ComponentType<React.SVGProps<SVGSVGElement>>; 
+  demos?: React.ComponentType[];
 }

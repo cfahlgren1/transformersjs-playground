@@ -23,17 +23,20 @@ const ClassificationIcon: React.FC<ClassificationIconProps> = ({ className = '' 
       <text x="130" y="25" fill="#7e22ce" fontSize="12" fontWeight="bold">Output</text>
       
       {/* Classification bars */}
+      {/* Sport */}
       <rect x="130" y="35" width="65" height="14" fill="#d8b4fe" rx="3" ry="3" />
       <text x="135" y="45" fill="#6b21a8" fontSize="10" fontWeight="bold">Sport</text>
-      <text x="188" y="45" fill="#6b21a8" fontSize="10" textAnchor="end">0.800</text>
+      <text x="200" y="45" fill="#6b21a8" fontSize="10" textAnchor="end">0.800</text>
       
+      {/* Food */}
       <rect x="130" y="53" width="26" height="14" fill="#d8b4fe" rx="3" ry="3" />
       <text x="135" y="63" fill="#6b21a8" fontSize="10" fontWeight="bold">Food</text>
-      <text x="188" y="63" fill="#6b21a8" fontSize="10" textAnchor="end">0.150</text>
+      <text x="200" y="63" fill="#6b21a8" fontSize="10" textAnchor="end">0.150</text>
       
+      {/* Music */}
       <rect x="130" y="71" width="9" height="14" fill="#d8b4fe" rx="3" ry="3" />
       <text x="135" y="81" fill="#6b21a8" fontSize="10" fontWeight="bold">Music</text>
-      <text x="188" y="81" fill="#6b21a8" fontSize="10" textAnchor="end">0.050</text>
+      <text x="200" y="81" fill="#6b21a8" fontSize="10" textAnchor="end">0.050</text>
     </svg>
   );
 };
