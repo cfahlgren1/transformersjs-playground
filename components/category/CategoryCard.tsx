@@ -40,7 +40,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
   );
 
   return (
-    <div className={`rounded-xl max-w-sm mx-auto p-6 text-white w-92 h-72 flex flex-col relative shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 ${gradient}`}>
+    <div className={`rounded-xl max-w-xs mx-auto p-6 text-white w-92 h-72 flex flex-col relative shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 ${gradient}`}>
       {isComingSoon ? (
         <>
           <CardContent />
