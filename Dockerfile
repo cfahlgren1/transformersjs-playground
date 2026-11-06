@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 
-FROM oven/bun:1 AS base
+FROM oven/bun:1.4.4 AS base
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -31,8 +31,8 @@ ENV NODE_ENV production
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN \
-    addgroup --system --gid 1001 nodejs; \
-    adduser --system --uid 1001 nextjs
+    groupadd --system --gid 1001 nodejs && \
+    useradd --system --uid 1001 --gid nodejs nextjs
 
 COPY --from=builder --link /app/.next ./.next
 
