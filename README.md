@@ -4,7 +4,7 @@ emoji: 🛝
 colorFrom: indigo
 colorTo: purple
 sdk: docker
-pinned: true
+pinned: false
 app_port: 3000
 ---
 # Transformers.js Playground
