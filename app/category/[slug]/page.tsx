@@ -1,9 +1,10 @@
 import CategoryContent from '@/components/category/CategoryContent';
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   return (
     <div className="container mx-auto px-4 py-8">
-      <CategoryContent slug={params.slug} />
+      <CategoryContent slug={slug} />
     </div>
   );
 }
